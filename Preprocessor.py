@@ -3,6 +3,8 @@ import copy
 from tqdm import tqdm
 import imp
 import warnings 
+import nltk
+nltk.download('punkt')
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 class Preprocessor:
 

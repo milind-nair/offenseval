@@ -5,7 +5,8 @@ from Classifier import Classifier
 from DeepLearning import DeepLearner
 from sklearn.model_selection import train_test_split as split
 import numpy as np
-
+import nltk
+nltk.download('punkt')
 sub_a=['NOT','OFF']
 
 dr_tr = DataReader('./datasets/training-v1/offenseval-training-v1.tsv','A')

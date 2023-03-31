@@ -1,17 +1,17 @@
 import warnings
 warnings.filterwarnings('ignore',category=FutureWarning)
-from keras.layers import Input, Dense, Embedding, Convolution1D, MaxPooling1D, MaxPooling2D, Convolution2D, LSTM
-from keras.layers import Reshape, Flatten, Dropout, Concatenate
-from keras.regularizers import l2, l1
-from keras import regularizers
-from keras.callbacks import ModelCheckpoint
-from keras.optimizers import Adam
-from keras.models import Sequential
+from tensorflow.keras.layers import Input, Dense, Embedding, Convolution1D, MaxPooling1D, MaxPooling2D, Convolution2D, LSTM
+from tensorflow.keras.layers import Reshape, Flatten, Dropout, Concatenate
+from tensorflow.keras.regularizers import l2, l1
+from tensorflow.keras import regularizers
+from tensorflow.keras.callbacks import ModelCheckpoint
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import Sequential
 from sklearn.model_selection import train_test_split
 import numpy as np
 import matplotlib.pyplot as plt
-from keras.preprocessing.text import one_hot
-from keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import one_hot
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 class DeepLearner:
 
@@ -78,7 +78,7 @@ class DeepLearner:
         self.model = model
     
     def visualize(self):
-        from keras.utils import plot_model
+        from tensorflow.keras.utils import plot_model
         plot_model(self.model,show_layer_names=False,show_shapes=True, to_file='./docs/'+str(self.model_type)+'.png')
     
     def encode_corpus(self,data):
